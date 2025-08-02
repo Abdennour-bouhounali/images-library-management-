@@ -48,19 +48,22 @@ This project was developed as part of a university team effort, where we earned 
 
 ## 🧭 Project Structure
 
+
+```
 ImageLibraryManager/
 ├── src/
-│ ├── mainwindow.ui
-│ ├── mainwindow.cpp
-│ ├── imagewindow.cpp
-│ ├── librarymanager.cpp
-│ ├── imageprocessor.cpp
+│   ├── mainwindow.ui
+│   ├── mainwindow.cpp
+│   ├── imagewindow.cpp
+│   ├── librarymanager.cpp
+│   ├── imageprocessor.cpp
 ├── assets/
-│ └── sample images
+│   └── sample images
 ├── include/
-│ └── header files
-├── CMakeLists.txt or .pro
+│   └── header files
+├── CMakeLists.txt or *.pro
 └── README.md
+```
 
 
 ---
