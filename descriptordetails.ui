@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DescriptorDetails</class>
+ <widget class="QDialog" name="DescriptorDetails">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>912</width>
+    <height>796</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton#filtreButton, QPushButton#SaveChanges {
+    background-color: rgb(153, 193, 241);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+QPushButton#filtreButton:hover, QPushButton#SaveChanges:hover {
+    background-color: rgb(123, 163, 211);
+}
+
+QPushButton#filtreButton:pressed, QPushButton#SaveChanges:pressed {
+    background-color: #003f7f;
+    padding-left: 12px;
+    padding-top: 12px;
+}
+
+
+
+QLineEdit {
+    background-color: #ffffff; /* Couleur de fond */
+    border: 1px solid #ccc; /* Bordure légère */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 5px; /* Espacement interne */
+    font-size: 14px; /* Taille de la police */
+    color: #333; /* Couleur du texte */
+}
+
+QLineEdit:focus {
+    border: 1px solid #99c1f1; /* Bordure active (au focus) */
+}
+
+QLineEdit:disabled {
+    background-color: #f0f0f0; /* Fond désactivé */
+    color: #a0a0a0; /* Texte désactivé */
+    border: 1px solid #d0d0d0; /* Bordure désactivée */
+}
+
+
+
+
+QLabel#kernelsizelabel, QLabel#thresholdLabel{
+    color: #333; /* Couleur du texte */
+    font-size: 14px; /* Taille de la police */
+    font-weight: bold; /* Texte en gras */
+    background-color: transparent; /* Fond transparent */
+    border: none; /* Pas de bordure */
+}
+
+QLabel#highlightedLabel {
+    color: #007BFF; /* Texte bleu pour attirer l'attention */
+    font-size: 16px; /* Taille légèrement plus grande */
+    font-weight: bold; /* Texte en gras */
+    border-bottom: 2px solid #007BFF; /* Ligne en bas pour mettre en valeur */
+}
+
+QLabel#errorLabel {
+    color: #FF0000; /* Texte rouge pour les erreurs */
+    font-size: 12px; /* Taille de police plus petite */
+    font-style: italic; /* Texte en italique */
+}
+
+QFrame {
+    border: 1px solid #ccc; /* Bordure douce */
+    border-radius: 10px; /* Coins arrondis */
+    background-color: #f5f5f5; /* Fond clair */
+    padding: 10px; /* Espacement interne */
+}
+
+QLabel#titleLabel_3{
+    font-size: 18px; /* Titre plus grand */
+    font-weight: bold; /* Gras */
+    color: #007BFF; /* Couleur bleue */
+    margin-bottom: 10px; /* Espacement sous le titre */
+}
+
+QLabel {
+    font-size: 14px; /* Texte normal */
+    color: #333; /* Couleur du texte */
+    margin: 5px 0; /* Espacement entre les éléments */
+}
+
+</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>70</y>
+     <width>351</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:700;&quot;&gt;Image Processing Tools&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="thresholdInput">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>710</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="thresholdLabel">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>670</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Threshold:</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_2">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>680</y>
+     <width>79</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget_3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>620</y>
+     <width>891</width>
+     <height>73</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <item>
+     <widget class="QComboBox" name="comboBox">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox {
+    height: 24px; /* Hauteur similaire aux boutons */
+   background-color: rgb(222, 221, 218);
+}
+</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="filtreButton">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Apply</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="SaveChanges">
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Save</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+   <zorder>filtreButton</zorder>
+   <zorder>SaveChanges</zorder>
+   <zorder>comboBox</zorder>
+  </widget>
+  <widget class="ClickableLabel" name="ImageLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>210</y>
+     <width>442</width>
+     <height>399</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="ClickableLabel" name="FilteredImageLabel">
+   <property name="geometry">
+    <rect>
+     <x>458</x>
+     <y>210</y>
+     <width>441</width>
+     <height>399</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="kernelsizelabel">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>670</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Kernel size : </string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Kernelsizeinput">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>710</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_icone_1">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>60</y>
+     <width>81</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>AppImages/traiter.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_icone_2">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>60</y>
+     <width>81</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>AppImages/traiter.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ClickableLabel</class>
+   <extends>QLabel</extends>
+   <header>../../../ClickableLabel.hpp</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

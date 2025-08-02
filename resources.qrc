@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>AppImages/traiter.png</file>
+        <file>AppImages/Back_g.jpg</file>
+        <file>AppImages/Widget.png</file>
+    </qresource>
+
+</RCC>

@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Home</class>
+ <widget class="QMainWindow" name="Home">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1091</width>
+    <height>870</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1100</width>
+    <height>923</height>
+   </size>
+  </property>
+  <property name="sizeIncrement">
+   <size>
+    <width>12</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton {
+    background-color: rgb(153, 193, 241);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+QPushButton:hover, {
+    background-color: rgb(123, 163, 211);
+}
+
+QPushButton:pressed {
+    background-color: #003f7f;
+    padding-left: 12px;
+    padding-top: 12px;
+}</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>33</width>
+    <height>24</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizeIncrement">
+    <size>
+     <width>10</width>
+     <height>0</height>
+    </size>
+   </property>
+   <widget class="QScrollArea" name="scrollArea23">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>70</y>
+      <width>791</width>
+      <height>761</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #f5f5f5;
+border: 1px solid #ccc;</string>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="librariesLayout">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>789</width>
+       <height>759</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>20</y>
+      <width>791</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLineEdit" name="ImageIdSearchInput">
+       <property name="minimumSize">
+        <size>
+         <width>218</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>5</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>IBeamCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string>font-size: 14px; padding: 8px; border: 1px solid #CCCCCC; border-radius: 5px; min-width: 200px;</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="placeholderText">
+        <string>Search by ID</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="SearchButton">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: rgb(153, 193, 241);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+QPushButton:hover, {
+    background-color: rgb(123, 163, 211);
+}
+
+QPushButton:pressed {
+    background-color: #003f7f;
+    padding-left: 12px;
+    padding-top: 12px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Search</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>528</width>
+         <height>17</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="returnButton">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: rgb(153, 193, 241);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+QPushButton:hover, {
+    background-color: rgb(123, 163, 211);
+}
+
+QPushButton:pressed {
+    background-color: #003f7f;
+    padding-left: 12px;
+    padding-top: 12px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Return</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="LogoutButton">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: rgb(153, 193, 241);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+QPushButton:hover, {
+    background-color: rgb(123, 163, 211);
+}
+
+QPushButton:pressed {
+    background-color: #003f7f;
+    padding-left: 12px;
+    padding-top: 12px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Logout</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>251</width>
+      <height>791</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="LoadLibraryLabel">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>119</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size: 16px;
+font-weight: bold;
+color: #333;</string>
+     </property>
+     <property name="text">
+      <string>Load A library</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_libraries">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>40</y>
+       <width>121</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox {
+    height: 24px; /* Hauteur similaire aux boutons */
+   background-color: rgb(222, 221, 218);
+}
+</string>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>110</y>
+       <width>231</width>
+       <height>501</height>
+      </rect>
+     </property>
+     <property name="contextMenuPolicy">
+      <enum>Qt::CustomContextMenu</enum>
+     </property>
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="title">
+      <string>Filter Options </string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
+     <layout class="QGridLayout" name="gridLayout" columnstretch="0,0,0,0">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetMinimumSize</enum>
+      </property>
+      <property name="horizontalSpacing">
+       <number>6</number>
+      </property>
+      <property name="verticalSpacing">
+       <number>30</number>
+      </property>
+      <item row="9" column="0" colspan="4">
+       <widget class="QPushButton" name="SubListButton_Gratuit">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: rgb(153, 193, 241);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+QPushButton:hover, {
+    background-color: rgb(123, 163, 211);
+}
+
+QPushButton:pressed {
+    background-color: #003f7f;
+    padding-left: 12px;
+    padding-top: 12px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Get Sub List</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0" colspan="4">
+       <widget class="QPushButton" name="SubListButton_Min">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: rgb(153, 193, 241);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+QPushButton:hover, {
+    background-color: rgb(123, 163, 211);
+}
+
+QPushButton:pressed {
+    background-color: #003f7f;
+    padding-left: 12px;
+    padding-top: 12px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Get Sub List</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLabel" name="label_15">
+        <property name="styleSheet">
+         <string notr="true">font-size: 16px;
+font-weight: bold;
+color: #FFA07A;</string>
+        </property>
+        <property name="text">
+         <string>Max</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="4">
+       <widget class="QPushButton" name="SubListButton_MaxMin">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: rgb(153, 193, 241);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+QPushButton:hover, {
+    background-color: rgb(123, 163, 211);
+}
+
+QPushButton:pressed {
+    background-color: #003f7f;
+    padding-left: 12px;
+    padding-top: 12px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Get Sub List</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="label_2">
+        <property name="styleSheet">
+         <string notr="true">font-size: 16px;
+font-weight: bold;
+color: #FFA07A;</string>
+        </property>
+        <property name="text">
+         <string>Max</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="label_13">
+        <property name="styleSheet">
+         <string notr="true">font-size: 16px;
+font-weight: bold;
+color: #FFA07A;</string>
+        </property>
+        <property name="text">
+         <string>Min</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0" colspan="4">
+       <widget class="QPushButton" name="SubListButton_Max">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: rgb(153, 193, 241);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+QPushButton:hover, {
+    background-color: rgb(123, 163, 211);
+}
+
+QPushButton:pressed {
+    background-color: #003f7f;
+    padding-left: 12px;
+    padding-top: 12px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Get Sub List</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="3">
+       <widget class="QLabel" name="label_11">
+        <property name="styleSheet">
+         <string notr="true">font-size: 16px;
+font-weight: bold;
+color: #FFA07A;</string>
+        </property>
+        <property name="text">
+         <string>Cost</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="styleSheet">
+         <string notr="true">font-size: 16px;
+font-weight: bold;
+color: #FFA07A;</string>
+        </property>
+        <property name="text">
+         <string>Min</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="3">
+       <widget class="QLabel" name="label_14">
+        <property name="styleSheet">
+         <string notr="true">font-size: 16px;
+font-weight: bold;
+color: #FFA07A;</string>
+        </property>
+        <property name="text">
+         <string>Cost</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLineEdit" name="MaxInput"/>
+      </item>
+      <item row="6" column="2">
+       <widget class="QLabel" name="label_16">
+        <property name="styleSheet">
+         <string notr="true">font-size: 18px;
+font-weight: bold;
+color: #333;
+ text-align: center;</string>
+        </property>
+        <property name="text">
+         <string>&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="0">
+       <widget class="QLabel" name="label_17">
+        <property name="styleSheet">
+         <string notr="true">font-size: 16px;
+font-weight: bold;
+color: #FFA07A;</string>
+        </property>
+        <property name="text">
+         <string>Free</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="MinInput"/>
+      </item>
+      <item row="6" column="1">
+       <widget class="QLineEdit" name="MaxInput_Only"/>
+      </item>
+      <item row="4" column="2">
+       <widget class="QLabel" name="label_12">
+        <property name="styleSheet">
+         <string notr="true">font-size: 18px;
+font-weight: bold;
+color: #333;
+ text-align: center;</string>
+        </property>
+        <property name="text">
+         <string>&lt;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLineEdit" name="MinInput_Only"/>
+      </item>
+      <item row="8" column="1">
+       <widget class="QCheckBox" name="Gratuit_checkBox">
+        <property name="styleSheet">
+         <string notr="true">QCheckBox {
+    font-size: 14px;
+    color: #333333;
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>630</y>
+       <width>231</width>
+       <height>73</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="title">
+      <string>Actions</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QPushButton" name="saveSubListButton">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: rgb(153, 193, 241);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+QPushButton:hover, {
+    background-color: rgb(123, 163, 211);
+}
+
+QPushButton:pressed {
+    background-color: #003f7f;
+    padding-left: 12px;
+    padding-top: 12px;
+}</string>
+        </property>
+        <property name="text">
+         <string>save SubList</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="ClearFilterButton">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: rgb(153, 193, 241);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+QPushButton:hover, {
+    background-color: rgb(123, 163, 211);
+}
+
+QPushButton:pressed {
+    background-color: #003f7f;
+    padding-left: 12px;
+    padding-top: 12px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Clear Filter</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QLabel" name="CreateSubListLabel">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>161</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size: 16px;
+font-weight: bold;
+color: #333;
+ text-align: center;</string>
+     </property>
+     <property name="text">
+      <string>Create a Sub-List</string>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>720</y>
+       <width>231</width>
+       <height>67</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Sort By Order</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QPushButton" name="DescendingButton">
+        <property name="styleSheet">
+         <string notr="true">background-color: #213555;
+color: white;
+padding: 5px 20px;
+border: none;
+border-radius: 5px;</string>
+        </property>
+        <property name="text">
+         <string>Desc</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="AscendingButton">
+        <property name="styleSheet">
+         <string notr="true">background-color: #213555;
+color: white;
+padding: 5px 20px;
+border: none;
+border-radius: 5px;</string>
+        </property>
+        <property name="text">
+         <string>Asce</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1091</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuLibrary">
+    <property name="title">
+     <string>Libraries</string>
+    </property>
+    <addaction name="CreateNewLibrary"/>
+    <addaction name="actionLoad_a_Library"/>
+    <addaction name="actionDelete_a_library"/>
+   </widget>
+   <widget class="QMenu" name="menuDescriptors">
+    <property name="title">
+     <string>Images</string>
+    </property>
+    <addaction name="actionAdd_New_Descriptor"/>
+   </widget>
+   <addaction name="menuLibrary"/>
+   <addaction name="menuDescriptors"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QToolBar" name="toolBar_2">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="CreateNewLibrary">
+   <property name="text">
+    <string>Create New Library</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionLoad_a_Library">
+   <property name="text">
+    <string>Load a Library</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionAdd_New_Descriptor">
+   <property name="text">
+    <string>Add New Image</string>
+   </property>
+  </action>
+  <action name="actionCost_Croissant">
+   <property name="text">
+    <string>Cost Croissant</string>
+   </property>
+  </action>
+  <action name="actionCost_Decroissant">
+   <property name="text">
+    <string>Cost Decroissant</string>
+   </property>
+  </action>
+  <action name="actionGratuit">
+   <property name="text">
+    <string>Gratuit</string>
+   </property>
+  </action>
+  <action name="actionDelete_a_library">
+   <property name="text">
+    <string>Delete a library</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
